@@ -31,7 +31,9 @@ public class Loot extends Node {
 				if (tar.interact("Take")) {
 					Time.sleep(500, 1200);
 				} else {
-					Camera.turnTo(tar);
+					if (Calculations.distanceBetween(Players.getLocal().getLocation(), loc) >= 8) {
+						Camera.turnTo(tar);
+					}
 				}
 			}
 		}

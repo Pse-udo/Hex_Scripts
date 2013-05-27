@@ -1,22 +1,23 @@
-package seagullslayer;
+package chickenkiller;
 
 import java.awt.Graphics;
 
 import org.hexbot.api.input.Mouse;
 import org.hexbot.api.input.Mouse.Speed;
 import org.hexbot.api.listeners.Paintable;
+import org.hexbot.api.methods.Walking;
 import org.hexbot.api.util.Random;
 import org.hexbot.api.util.Timer;
+import org.hexbot.api.wrapper.Tile;
 import org.hexbot.script.Manifest;
 import org.hexbot.script.Script;
 
-import seagullslayer.node.Attack;
-import seagullslayer.resources.Node;
-import seagullslayer.resources.util.Paint;
+import chickenkiller.node.Attack;
+import chickenkiller.resources.Node;
+import chickenkiller.resources.util.Paint;
 
-
-@Manifest(author = "Applet", name = "Seagull Slayer", description = "Kills Seagulls for experience!", version = 0.1)
-public class SeagullSlayer extends Script implements Paintable {
+@Manifest(author = "Applet", name = "Chicken Killer", description = "Kills chickens", version = 0.1)
+public class ChickenKiller extends Script implements Paintable {
 
 	private static final Node[] jobs = {new Attack()};
 	public static Timer runTime = new Timer(0);
